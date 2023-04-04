@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>태조 이성계가 태어난 년도는?</p>
+<input type="text" id="answer">
+<button id="send-answer">제출</button>
+<script type="text/javascript">
+    var count = 0;
+    document.getElementById('send-answer').addEventListener('click',function(){
+        count++;
+        let answer = document.getElementById("answer").value;
+        if(answer == 1335){
+            alert('성공')
+        }else if(answer != 1335 && count<4){
+            alert('멍청아'+count)
+        }else if(count > 4){
+            alert('멍청아')
+        }
+
+    });
+
+</script>
+<script type="text/javascript" src="/js/level2.js"></script>
+</body>
+</html>

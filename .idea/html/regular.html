@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</head>
+<body>
+<input type="text" id="email"></br>
+<button type="button" id="btn">버튼</button>
+<script>
+    $("#btn").click(function(){
+        var str = $("#email").val();
+        console.log("str : "+str)
+        if(/\S+@\S+\.\S+/.test(str) == false){
+            alert('이메일형식아님')
+        }else{
+            alert('이메일')
+        }
+    })
+    $("#btn").click(function(){
+        var str = $("#email").val();
+        console.log("str : "+str)
+        if(/[A-Z]/.test(str) == true){
+            alert('대문자포함')
+        }else{
+            alert('대문자미포함')
+        }
+    })
+
+</script>
+</body>
+</html>
